@@ -1,0 +1,304 @@
+.contact {
+  border-bottom: 1px solid var(--border-soft);
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.contact-header {
+  display: grid;
+
+  grid-template-columns: 90px 1fr;
+
+  gap: 2rem;
+
+  margin-bottom: 5rem;
+}
+
+.contact-header h2 {
+  margin-top: 0.8rem;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(3.5rem, 7vw, 7rem);
+
+  font-weight: 500;
+
+  line-height: 0.84;
+
+  letter-spacing: -0.05em;
+}
+
+.contact-header h2 span {
+  color: var(--brass);
+}
+
+
+/* ================================
+   MAIN
+================================ */
+
+.contact-main {
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  border-top: 1px solid var(--border-soft);
+
+  border-bottom: 1px solid var(--border-soft);
+}
+
+
+/* ================================
+   INTRO
+================================ */
+
+.contact-intro {
+  padding: 4rem 3rem;
+
+  border-right: 1px solid var(--border-soft);
+}
+
+.contact-index {
+  font-family: var(--font-mono);
+
+  font-size: 0.55rem;
+
+  letter-spacing: 0.1em;
+
+  color: var(--brass);
+}
+
+.contact-intro h3 {
+  margin-top: 1.5rem;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(2.8rem, 5vw, 5rem);
+
+  font-weight: 500;
+
+  line-height: 0.88;
+
+  letter-spacing: -0.04em;
+}
+
+.contact-intro p {
+  max-width: 400px;
+
+  margin-top: 2rem;
+
+  font-size: 0.8rem;
+
+  line-height: 1.9;
+
+  color: var(--cocoa-soft);
+}
+
+
+/* ================================
+   LINKS
+================================ */
+
+.contact-links {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.contact-link {
+  display: grid;
+
+  grid-template-columns: 55px 1fr 50px;
+
+  align-items: center;
+
+  gap: 1.5rem;
+
+  min-height: 125px;
+
+  padding: 1.5rem 2rem;
+
+  border-bottom: 1px solid var(--border-soft);
+
+  transition: var(--transition);
+}
+
+.contact-link:last-child {
+  border-bottom: none;
+}
+
+.contact-link:hover {
+  padding-left: 2.7rem;
+
+  background: rgba(169, 130, 82, 0.05);
+}
+
+.contact-link-number {
+  font-family: var(--font-mono);
+
+  font-size: 0.55rem;
+
+  color: var(--brass);
+}
+
+.contact-link-content span {
+  display: block;
+
+  margin-bottom: 0.4rem;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.5rem;
+
+  letter-spacing: 0.08em;
+
+  color: var(--cocoa-soft);
+}
+
+.contact-link-content strong {
+  font-family: var(--font-display);
+
+  font-size: clamp(1.3rem, 2vw, 2rem);
+
+  font-weight: 500;
+
+  word-break: break-word;
+}
+
+.contact-arrow {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border-soft);
+
+  font-size: 1rem;
+
+  color: var(--cocoa);
+
+  transition: var(--transition);
+}
+
+.contact-link:hover .contact-arrow {
+  background: var(--brass);
+
+  border-color: var(--brass);
+
+  color: var(--limestone);
+
+  transform: rotate(45deg);
+}
+
+
+/* ================================
+   STATEMENT
+================================ */
+
+.contact-statement {
+  display: grid;
+
+  grid-template-columns: auto 1fr auto auto;
+
+  align-items: center;
+
+  gap: 1.5rem;
+
+  padding: 2rem 0;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.55rem;
+
+  letter-spacing: 0.08em;
+}
+
+.contact-statement > span:first-child {
+  color: var(--brass);
+}
+
+.contact-statement strong {
+  font-family: var(--font-mono);
+
+  font-size: 0.55rem;
+
+  font-weight: 500;
+}
+
+.statement-divider {
+  height: 1px;
+
+  background: var(--border-soft);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+  .contact-header {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .contact-main {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-intro {
+    border-right: none;
+
+    border-bottom: 1px solid var(--border-soft);
+
+    padding: 3rem 2rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .contact-header {
+    display: block;
+  }
+
+  .contact-header .section-number {
+    margin-bottom: 2rem;
+  }
+
+  .contact-intro {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .contact-link {
+    grid-template-columns: 35px 1fr 40px;
+
+    gap: 0.8rem;
+
+    padding: 1.2rem;
+  }
+
+  .contact-link:hover {
+    padding-left: 1.5rem;
+  }
+
+  .contact-link-content strong {
+    font-size: 1.15rem;
+  }
+
+  .contact-statement {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1rem;
+  }
+
+  .statement-divider {
+    display: none;
+  }
+}
