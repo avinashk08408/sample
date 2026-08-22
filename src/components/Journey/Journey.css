@@ -1,0 +1,306 @@
+.journey {
+  border-bottom: 1px solid var(--border-soft);
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.journey-heading {
+  display: grid;
+
+  grid-template-columns: 90px 1fr 340px;
+
+  gap: 2rem;
+
+  align-items: start;
+
+  margin-bottom: 5rem;
+}
+
+.journey-heading h2 {
+  margin-top: 0.8rem;
+
+  font-family: var(--font-display);
+
+  font-size: clamp(3rem, 5vw, 5rem);
+
+  font-weight: 500;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.04em;
+}
+
+.journey-heading h2 span {
+  color: var(--brass);
+}
+
+.journey-heading > p {
+  align-self: end;
+
+  font-size: 0.82rem;
+
+  line-height: 1.8;
+
+  color: var(--cocoa-soft);
+}
+
+
+/* ================================
+   LAYOUT
+================================ */
+
+.journey-layout {
+  display: grid;
+
+  grid-template-columns: 1.5fr 0.7fr;
+
+  gap: 7rem;
+}
+
+
+/* ================================
+   TIMELINE
+================================ */
+
+.timeline {
+  position: relative;
+
+  border-top: 1px solid var(--border-soft);
+}
+
+.timeline::before {
+  content: "";
+
+  position: absolute;
+
+  left: 6px;
+  top: 0;
+  bottom: 0;
+
+  width: 1px;
+
+  background: var(--border-brass);
+}
+
+.timeline-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 100px 1fr;
+
+  gap: 2rem;
+
+  padding: 2.5rem 0 2.5rem 2.5rem;
+
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.timeline-marker {
+  position: absolute;
+
+  left: 0;
+  top: 2.7rem;
+
+  width: 13px;
+  height: 13px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--brass);
+
+  border-radius: 50%;
+
+  background: var(--limestone);
+}
+
+.timeline-marker span {
+  width: 4px;
+  height: 4px;
+
+  border-radius: 50%;
+
+  background: var(--brass);
+}
+
+.timeline-year {
+  padding-top: 0.2rem;
+
+  font-family: var(--font-mono);
+
+  font-size: 0.58rem;
+
+  line-height: 1.6;
+
+  color: var(--brass);
+}
+
+.timeline-type {
+  font-family: var(--font-mono);
+
+  font-size: 0.56rem;
+
+  letter-spacing: 0.1em;
+
+  color: var(--cocoa-soft);
+}
+
+.timeline-content h3 {
+  margin-top: 0.6rem;
+
+  font-family: var(--font-display);
+
+  font-size: 2.4rem;
+
+  font-weight: 500;
+
+  line-height: 1;
+}
+
+.timeline-content h4 {
+  margin-top: 0.6rem;
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  color: var(--cocoa-soft);
+}
+
+.timeline-content p {
+  max-width: 580px;
+
+  margin-top: 1rem;
+
+  font-size: 0.78rem;
+
+  line-height: 1.8;
+
+  color: var(--cocoa-soft);
+}
+
+
+/* ================================
+   MILESTONES
+================================ */
+
+.milestones {
+  align-self: start;
+
+  padding: 2rem;
+
+  border: 1px solid var(--border-brass);
+
+  background: rgba(169, 130, 82, 0.035);
+}
+
+.milestone-label {
+  font-family: var(--font-mono);
+
+  font-size: 0.57rem;
+
+  letter-spacing: 0.1em;
+
+  color: var(--brass);
+}
+
+.milestones h3 {
+  margin-top: 1rem;
+
+  font-family: var(--font-display);
+
+  font-size: 2.4rem;
+
+  font-weight: 500;
+
+  line-height: 0.95;
+}
+
+.milestone-list {
+  margin-top: 2.5rem;
+}
+
+.milestone {
+  display: grid;
+
+  grid-template-columns: 35px 1fr;
+
+  gap: 0.7rem;
+
+  padding: 1rem 0;
+
+  border-top: 1px solid var(--border-soft);
+}
+
+.milestone span {
+  font-family: var(--font-mono);
+
+  font-size: 0.55rem;
+
+  color: var(--brass);
+}
+
+.milestone p {
+  font-size: 0.72rem;
+
+  line-height: 1.5;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .journey-heading {
+    grid-template-columns: 60px 1fr;
+  }
+
+  .journey-heading > p {
+    grid-column: 2;
+  }
+
+  .journey-layout {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .journey-heading {
+    display: block;
+  }
+
+  .journey-heading .section-number {
+    margin-bottom: 2rem;
+  }
+
+  .journey-heading > p {
+    margin-top: 2rem;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+
+    gap: 0.7rem;
+
+    padding-left: 2rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 2rem;
+  }
+
+  .milestones {
+    padding: 1.5rem;
+  }
+}
