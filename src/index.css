@@ -17,7 +17,7 @@
   ----------------------------------------- */
 
   /* 60% — Background */
-  --limestone: #E8DDC8;
+  --limestone: #DDD6C9 /* #E8DDC8; */
   --limestone-dark: #DED0B7;
 
   /* 30% — Main Typography */
