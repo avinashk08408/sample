@@ -5,13 +5,13 @@ function App() {
     <div
       style={{
         minHeight: "100vh",
+        background: "#E7DDC9",
+        color: "#49392C",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "var(--limestone)",
-        color: "var(--cocoa)",
-        fontFamily: "var(--font-display)",
-        fontSize: "clamp(2rem, 6vw, 5rem)",
+        fontFamily: '"Playfair Display", serif',
+        fontSize: "4rem",
       }}
     >
       AVINASH K
