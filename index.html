@@ -1,442 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sanjeevan S | Cyber Security Portfolio</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: #f5f7fa;
-            color: #1f2937;
-            line-height: 1.6;
-        }
-
-        /* NAVBAR */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: #ffffff;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 18px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 22px;
-            font-weight: bold;
-            color: #2563eb;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #374151;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #2563eb;
-        }
-
-        /* HERO */
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-            background: #ffffff;
-        }
-
-        .hero-content {
-            max-width: 700px;
-        }
-
-        .hero h1 {
-            font-size: 55px;
-            margin-bottom: 10px;
-        }
-
-        .hero h1 span {
-            color: #2563eb;
-        }
-
-        .hero h2 {
-            font-size: 25px;
-            color: #4b5563;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            color: #6b7280;
-            margin-bottom: 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
-            background: #2563eb;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .btn:hover {
-            background: #1d4ed8;
-            transform: translateY(-2px);
-        }
-
-        /* SECTIONS */
-        section {
-            padding: 80px 8%;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 45px;
-        }
-
-        /* ABOUT */
-        .about {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-            color: #6b7280;
-        }
-
-        /* SKILLS */
-        .skills-container {
-            max-width: 900px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-        }
-
-        .skill {
-            background: white;
-            padding: 25px;
-            text-align: center;
-            border-radius: 12px;
-            border: 1px solid #e5e7eb;
-            transition: 0.3s;
-        }
-
-        .skill:hover {
-            transform: translateY(-5px);
-            border-color: #2563eb;
-        }
-
-        .skill h3 {
-            color: #2563eb;
-            margin-bottom: 8px;
-        }
-
-        /* PROJECTS */
-        .projects-container {
-            max-width: 1000px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .project {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid #e5e7eb;
-            transition: 0.3s;
-        }
-
-        .project:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        }
-
-        .project h3 {
-            margin-bottom: 12px;
-            color: #2563eb;
-        }
-
-        .project p {
-            color: #6b7280;
-        }
-
-        /* CONTACT */
-        .contact {
-            text-align: center;
-            background: #ffffff;
-        }
-
-        .contact p {
-            margin-bottom: 10px;
-            color: #6b7280;
-        }
-
-        .social-links {
-            margin-top: 25px;
-        }
-
-        .social-links a {
-            display: inline-block;
-            margin: 8px;
-            padding: 10px 18px;
-            border: 1px solid #2563eb;
-            border-radius: 8px;
-            text-decoration: none;
-            color: #2563eb;
-            transition: 0.3s;
-        }
-
-        .social-links a:hover {
-            background: #2563eb;
-            color: white;
-        }
-
-        /* FOOTER */
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #111827;
-            color: #d1d5db;
-        }
-
-        /* MOBILE */
-        @media (max-width: 600px) {
-
-            nav {
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            nav ul {
-                gap: 12px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            .hero h2 {
-                font-size: 20px;
-            }
-
-            section {
-                padding: 60px 5%;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- NAVBAR -->
-    <nav>
-        <div class="logo">Sanjeevan S</div>
-
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-
-    <!-- HOME -->
-    <section class="hero" id="home">
-
-        <div class="hero-content">
-
-            <h1>Hi, I'm <span>Sanjeevan</span></h1>
-
-            <h2>Cyber Security Student</h2>
-
-            <p>
-                I'm a 2nd year Cyber Security student interested in
-                ethical hacking, network security, Linux and cybersecurity.
-            </p>
-
-            <a href="#projects" class="btn">
-                View My Projects
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-    <section id="about">
-
-        <h2 class="section-title">About Me</h2>
-
-        <div class="about">
-
-            <p>
-                I am Sanjeevan S, a 2nd year Cyber Security student.
-                I am passionate about learning cybersecurity, ethical hacking,
-                networking and system security. I enjoy exploring security
-                tools and building projects to improve my technical skills.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- SKILLS -->
-    <section id="skills">
-
-        <h2 class="section-title">My Skills</h2>
-
-        <div class="skills-container">
-
-            <div class="skill">
-                <h3>Cyber Security</h3>
-                <p>Security fundamentals and threat awareness</p>
-            </div>
-
-            <div class="skill">
-                <h3>Ethical Hacking</h3>
-                <p>Learning penetration testing techniques</p>
-            </div>
+  <head>
 
-            <div class="skill">
-                <h3>Networking</h3>
-                <p>TCP/IP, networking and security concepts</p>
-            </div>
+    <!-- =========================================
+         BASIC DOCUMENT SETTINGS
+    ========================================== -->
 
-            <div class="skill">
-                <h3>Python</h3>
-                <p>Basic scripting and automation</p>
-            </div>
+    <meta charset="UTF-8" />
 
-            <div class="skill">
-                <h3>Linux</h3>
-                <p>Linux command line and security tools</p>
-            </div>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
 
-            <div class="skill">
-                <h3>Git & GitHub</h3>
-                <p>Version control and project management</p>
-            </div>
+    <meta
+      name="theme-color"
+      content="#E8DDC8"
+    />
 
-        </div>
+    <meta
+      name="color-scheme"
+      content="light"
+    />
 
-    </section>
 
+    <!-- =========================================
+         TITLE
+    ========================================== -->
 
-    <!-- PROJECTS -->
-    <section id="projects">
+    <title>
+      Avinash K — Cybersecurity Student & Developer
+    </title>
 
-        <h2 class="section-title">My Projects</h2>
 
-        <div class="projects-container">
+    <!-- =========================================
+         SEO
+    ========================================== -->
 
-            <div class="project">
-                <h3>🔐 Network Security Project</h3>
-                <p>
-                    A project focused on understanding network security,
-                    threats and basic security techniques.
-                </p>
-            </div>
+    <meta
+      name="description"
+      content="Avinash K — Cybersecurity student and developer interested in web development, cybersecurity tools, secure software and technical problem solving."
+    />
 
-            <div class="project">
-                <h3>🛡️ Vulnerability Scanner</h3>
-                <p>
-                    A basic security project designed to identify
-                    potential vulnerabilities in a target system.
-                </p>
-            </div>
+    <meta
+      name="author"
+      content="Avinash K"
+    />
 
-            <div class="project">
-                <h3>🐍 Python Security Tool</h3>
-                <p>
-                    A Python-based cybersecurity tool created to
-                    practice automation and security concepts.
-                </p>
-            </div>
+    <meta
+      name="keywords"
+      content="Avinash K, Cybersecurity Student, Cybersecurity Developer, Web Developer, Security, Python, React, SRM Valliammai Engineering College"
+    />
 
-        </div>
 
-    </section>
+    <!-- =========================================
+         OPEN GRAPH
+    ========================================== -->
 
+    <meta
+      property="og:title"
+      content="Avinash K — Cybersecurity Student & Developer"
+    />
 
-    <!-- CONTACT -->
-    <section class="contact" id="contact">
+    <meta
+      property="og:description"
+      content="Portfolio of Avinash K — exploring cybersecurity, web development and secure digital experiences."
+    />
 
-        <h2 class="section-title">Contact Me</h2>
+    <meta
+      property="og:type"
+      content="website"
+    />
 
-        <p>Email: your-email@example.com</p>
+    <meta
+      property="og:image"
+      content="/assets/profile.png"
+    />
 
-        <div class="social-links">
 
-            <a href="https://github.com/" target="_blank">
-                GitHub
-            </a>
+    <!-- =========================================
+         FAVICON
+    ========================================== -->
 
-            <a href="https://linkedin.com/" target="_blank">
-                LinkedIn
-            </a>
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/profile.png"
+    />
 
-        </div>
 
-    </section>
+    <!-- =========================================
+         PRECONNECT
+    ========================================== -->
 
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
 
-    <!-- FOOTER -->
-    <footer>
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
 
-        <p>
-            © 2026 Sanjeevan S. All Rights Reserved.
-        </p>
+  </head>
 
-    </footer>
 
+  <body>
 
-    <script>
+    <!-- React mounts here -->
 
-        // Simple scroll effect
-        window.addEventListener("scroll", function () {
+    <div id="root"></div>
 
-            const nav = document.querySelector("nav");
 
-            if (window.scrollY > 50) {
-                nav.style.boxShadow = "0 3px 15px rgba(0,0,0,0.08)";
-            } else {
-                nav.style.boxShadow = "none";
-            }
+    <!-- Vite / React entry -->
 
-        });
+    <script
+      type="module"
+      src="/src/main.jsx"
+    ></script>
 
-    </script>
-
-</body>
+  </body>
 </html>
