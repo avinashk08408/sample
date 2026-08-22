@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import Stack from "./components/Stack/Stack";
 
 function App() {
   return (
@@ -9,9 +11,10 @@ function App() {
       <main>
         <Hero />
 
-        {/* NEXT SECTIONS WILL BE ADDED HERE */}
-        <section id="about"></section>
-        <section id="stack"></section>
+        <About />
+
+        <Stack />
+
         <section id="projects"></section>
         <section id="journey"></section>
         <section id="certifications"></section>
